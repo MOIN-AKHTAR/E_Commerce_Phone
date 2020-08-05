@@ -67,7 +67,7 @@ closeModal=()=>{
 addTotal=()=>{
     let subtotal=0;
     this.state.cart.map(Item=>subtotal+=Item.total);
-    const tax=Number(subtotal*0.1).toFixed(2);
+    const tax=Number((subtotal*0.1).toFixed(2));
     const total=subtotal+tax;
     this.setState({
         cartSubTotal:subtotal,
